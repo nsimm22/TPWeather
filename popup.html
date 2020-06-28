@@ -1,0 +1,85 @@
+  <html>
+    <head>
+    </head>
+    <body>
+      <center>
+        <a href="https://instagram.com/nsimm22/" target="_blank"><img src="images/icon48.png"></a>
+        <h2>Change Location:</h2>
+        <h4>City:</h4><input type="text" id="address">
+        <h4>Province/State:</h4><input type="text" id="city">
+        <button id="submit">Go</button>
+
+        <h2>Download Data</h2>
+        <button id="get">GET</button>
+      </center>
+      <br>
+        <div class="onoffswitch">
+          <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" tabindex="0" checked>
+          <label class="onoffswitch-label" for="myonoffswitch">
+              <span class="onoffswitch-inner"></span>
+              <span class="onoffswitch-switch"></span>
+          </label>
+      </div>
+      <script src="popup.js"></script>
+    </body>
+  </html>
+  <style>
+    button {
+      margin-top: 5px;
+      background-color: rgb(111, 215, 83);
+      border: 1px black solid;
+
+    }
+    body {
+      background-color: rgb(141,178,216);
+    }
+    /* The switch - the box around the slider */
+    .onoffswitch {
+    position: relative; width: 101px;
+    margin: auto;
+    -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+}
+.onoffswitch-checkbox {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+.onoffswitch-label {
+    display: block; overflow: hidden; cursor: pointer;
+    border: 2px solid #999999; border-radius: 20px;
+}
+.onoffswitch-inner {
+    display: block; width: 200%; margin-left: -100%;
+    transition: margin 0.3s ease-in 0s;
+}
+.onoffswitch-inner:before, .onoffswitch-inner:after {
+    display: block; float: left; width: 50%; height: 30px; padding: 0; line-height: 30px;
+    font-size: 14px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
+    box-sizing: border-box;
+}
+.onoffswitch-inner:before {
+    content: "Metric";
+    padding-left: 10px;
+    background-color: #34A7C1; color: #FFFFFF;
+}
+.onoffswitch-inner:after {
+    content: "Imperial";
+    padding-right: 10px;
+    background-color: #00C400; color: #FFFFFF;
+    text-align: right;
+}
+.onoffswitch-switch {
+    display: block; width: 18px; margin: 6px;
+    background: #FFFFFF;
+    position: absolute; top: 0; bottom: 0;
+    right: 67px;
+    border: 2px solid #999999; border-radius: 20px;
+    transition: all 0.3s ease-in 0s; 
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+    margin-left: 0;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+    right: 0px; 
+}
+  </style>
